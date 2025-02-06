@@ -22,6 +22,10 @@ ul {
   list-style-type: none;
 }
 
+section{
+  min-width:100vw;
+}
+
 /* Header and Navigation Styles */
 header {
   background-color: #3b141c;
@@ -41,7 +45,7 @@ header h2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* position: fixed; */
+  position: fixed;
   width: 100%;
   top: 0;
   left: 0;
@@ -52,7 +56,8 @@ header h2 {
 
 /* Navigation links */
 .nav-links {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: small;
   transition: 0.4s ease;
 }
@@ -118,6 +123,7 @@ li .nav-links:hover {
   font-weight: bolder;
   color: #fff;
   font-size: 2em;
+  text-align: center;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
@@ -158,12 +164,12 @@ li .nav-links:hover {
 
 /* About styles */
 .About {
-  /* padding: 130px ; */
+  padding: 130px ;
   align-content: center;
   background-color: #faf4f5;
   justify-content: center;
   width: 100%;
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
 
 .About-details {
@@ -173,10 +179,12 @@ li .nav-links:hover {
   gap: 6rem;
   padding: 20px 25px;
 }
-.headshot img {
+.Loveit {
   width: 250px;
   height: 230px;
   border-radius: 50%;
+  padding: 0;
+  margin: 0;
 }
 .A-content {
   justify-items: center;
@@ -187,7 +195,7 @@ li .nav-links:hover {
 }
 #A-h2::after {
   display: block;
-  height: 4px;
+  height: 3px;
   width: 3.8rem;
   background-color: #f8951c;
   margin: 1px auto 0;
@@ -197,34 +205,99 @@ li .nav-links:hover {
 .A-write-up {
   font-family: Arial, Helvetica, sans-serif;
   font-size: small;
-  text-align: center;
+  line-height: 20px;
+text-align: center; 
 }
 
-.A-links{
+.A-links {
   display: flex;
   justify-content: space-between;
-gap: 3rem;
+  gap: 3rem;
+  padding: 0;
 }
 .pics {
   width: 20px;
   height: 20px;
   border-radius: 10px;
+  color: #252525;
+  transition: 0.2s ease;
 }
-.pics:hover{
+.pics:hover {
   border: 2px solid #f8951c;
 }
 
 .A-write-up {
   text-align: left;
-display: -webkit-box;
--webkit-line-clamp: 4;
--webkit-box-orient: vertical;
-overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+
+/* Menu Styles */
+
+.Menu-segement{
+ padding: 20px 20px 15px ;
+ background-color: #252525;
+ justify-content: space-between;
+ 
+}
+
+.Menu-content{
+  justify-content: center;
+  gap: 200rem;
+  color: #fff;
+  justify-content: space-between;
+  align-items: center;
+
+}
+#M-h2{
+  padding: 27px 15px;
+text-align: center;
+}
+#M-h2::after{
+  display: flex;
+  width: 3.8rem;
+  height: 3px;
+  background-color: #f8951c;
+  margin: 1px   auto 0;
+  content:""; 
+
+}
+.Main-u{
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  margin: 10px;
+  line-height: 19px;
 
 }
 
+.Menu-list{
+  display: grid;
+  grid-template-columns: repeat(3 ,1fr);
+  grid-template-rows: repeat(2 ,1fr);
+  row-gap: 5rem;
+  column-gap: 11rem;
+}
+
+.M-svg{
+  width: 10rem;
+  height: 10rem;
+  border-radius: 5rem;
+  margin-bottom: 15px;
+  object-fit: contain;
+  aspect-ratio:2px;
+}
+
+.Menu-content .Menu-list .M-outline{
+  text-align: center;
+}
+
+
 /* === Responsive Design === */
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 900px) {
   /* Show menu icon */
   .menu-bar {
     display: block;
@@ -235,12 +308,12 @@ overflow: hidden;
   /* Hide menu by default */
   .link-list {
     flex-direction: column;
-    background:#fff;
+    background: #fff;
     position: fixed;
     top: 8rem;
     gap: 3.5rem;
     left: 100%;
-    width: calc(60% - 2rem);
+    width: calc(60% - 4rem);
     height: 50rem;
     text-align: center;
     padding: 3rem 0;
@@ -250,9 +323,9 @@ overflow: hidden;
   .link-list.active {
     left: -1rem;
     right: 1rem;
-    /* height: 60%; */
+
   }
-  .nav-links{
+  .nav-links {
     color: black;
   }
 
@@ -268,45 +341,78 @@ overflow: hidden;
   .menu-bar.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
-  
+
   /*----HOME----*/
+  .navs-content {
+    position: static;
+  }
 
   .home .home-content {
   flex-direction: column-reverse;
+  flex-direction: column-reverse;
   /* max-height: max-content; */
-  justify-content: space-around;
-  padding: 0;
-  
+    flex-direction: column-reverse;
+  /* max-height: max-content; */
+    justify-content: space-around;
+    padding: 0;
   }
 
-  .Product-pic{
+  .Product-pic {
     width: 100%;
     border-radius: 50%;
     padding: 0%;
   }
 
-  .write-up .d-head{
+  .write-up .d-head {
     text-align: center;
   }
 
-  .write-up .intro{
+  .write-up .intro {
     font-size: larger;
   }
-  
-  .descript{
+
+  .descript {
     text-align: center;
   }
   .connect-btns {
-   justify-content: center;
+    justify-content: center;
   }
 
   /*----About----*/
-       
-  .About-details{
- flex-direction: column-reverse;
+
+  .About-details {
+    flex-direction: column-reverse;
   }
 
- .A-content{
-  text-align: center;
- }
+  .A-content {
+    text-align: center;
+  }
+
+
+/* Menu Styles */
+
+.Menu-list{
+  display: grid;
+  grid-template-columns: repeat(2 ,1fr);
+  grid-template-rows: repeat(3 ,1fr);
+  row-gap: 5rem;
+  column-gap: 11rem;
+}
+
+ 
+}
+
+/* === Responsive Design for mobile screen  === */
+@media screen and (max-width:425px){
+  
+  /* Menu Styles */
+  .Menu-list{
+    display: grid;
+    grid-template-columns: repeat(1fr);
+    grid-template-rows: repeat(6 ,1fr);
+    row-gap: 5rem;
+    column-gap: 11rem;
+  }
+  
+   
 }
