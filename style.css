@@ -169,7 +169,7 @@ li .nav-links:hover {
   background-color: #faf4f5;
   justify-content: center;
   width: 100%;
-  /* min-height: 100vh; */
+  min-height: 90vh;
 }
 
 .About-details {
@@ -262,7 +262,7 @@ text-align: center;
   height: 3px;
   background-color: #f8951c;
   margin: 1px   auto 0;
-  content:""; 
+  /* content:"";  */
 
 }
 .Main-u{
@@ -403,16 +403,18 @@ text-align: center;
 }
 
 /* === Responsive Design for mobile screen  === */
-@media screen and (max-width:425px){
+@media screen and (max-width:640px ){
   
   /* Menu Styles */
-  .Menu-list{
+ .Menu-list{
     display: grid;
-    grid-template-columns: repeat(1fr);
-    grid-template-rows: repeat(6 ,1fr);
+    grid-template-columns: repeat(1,1fr);
     row-gap: 5rem;
     column-gap: 11rem;
   }
+
+  .Main-u{
+    text-align: center;
+  }
   
-   
 }
