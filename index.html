@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+     <!-- Linking Swiper JS -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <title>☕coffee-online-shop</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -134,8 +136,9 @@
         <div class="Menu-content">
           <h2 id="M-h2">Our Menu</h2>
           <ul class="Menu-list">
-           <li class="M-outline"> 
-            <img src="images/hotbeverage.jpg" alt="coffee" class="M-svg">
+           <li class="M-outline">
+            <div class="none"><img src="images/hotbeverage.jpg" alt="coffee" class="M-svg"></div> 
+            
             <h3 class="M-decript">Hot Beverages</h3>
             <p class="Main-u" >Wide range of steaming hot coffee to you fresh and light</p>
           </li>
@@ -166,40 +169,44 @@
 
       <!-- Testimonial Segement -->
       <section class="Testimonial-Segement" id="Testimonial-Segement">
-        <div class="Testimonial-content">
+        <div class="slider-wrapper swiper">
           <h2 class="Testimonial-h2">Testimonial</h2>
-          <ul class="Testimonials-list">
-            <li class="testifier">
+          <ul class="swiper-wrapper">
+            <li class="swiper-slide">
               <img src="images/Testifer1.jpg" alt="Customer-feedback" class="testifier-img">
               <h3 class="testifier-name">James Wilson</h2>
               <p class="Tetimony">"This coffee is a game changer! It’s the perfect blend of rich flavor and smooth finish."</p>
             </li>
-            <li class="testifier">
+            <li class="swiper-slide">
               <img src="images/Testifer2.jpg" alt="Customer-feedback" class="testifier-img">
              <h3 class="testifier-name"> George Kidney</h2>
               <p class="Tetimony">"I’ve never tasted anything like it before. This coffee makes every morning special!" </p>
             </li>
-            <li class="testifier">
+            <li class="swiper-slide">
               <img src="images/Testifier 4.jpg" alt="Customer-feedback" class="testifier-img">
              <h3  class="testifier-name">Grace Eleanor</h2>
               <p class="Tetimony">"Simply amazing! This coffee has the perfect taste that keeps me coming back for more."</p>
             </li>
-            <li class="testifier ">
+            <li class="swiper-slide">
               <img src="images/Testifier5.jpg" alt="Customer-feedback" class="testifier-img">
              <h3 class="testifier-name">William John</h2>
               <p class="Tetimony">"Every sip is a delight! It’s the freshest, most flavorful coffee I’ve ever had."</p>
             </li>
-            <li class="testifier ">
+            <li class="swiper-slide">
               <img src="images/Testifier 4.jpg" alt="Customer-feedback" class="testifier-img">
              <h3 class="testifier-name">Grace Eleanor</h2>
               <p class="Tetimony">"Simply amazing! This coffee has the perfect taste that keeps me coming back for more."</p>
             </li>
-            <li class="testifier ">
+            <li class="swiper-slide">
               <img src="images/Testifier5.jpg" alt="Customer-feedback" class="testifier-img">
              <h3 class="testifier-name">William John</h2>
               <p class="Tetimony">"Every sip is a delight! It’s the freshest, most flavorful coffee I’ve ever had."</p>
             </li>
           </ul>
+           <!-- Pagination and Navigation Buttons -->
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
         </div>
       </section>
        <!-- Gallery Segement -->
@@ -271,6 +278,9 @@
           </div>
       </section>
     </main>
+<!-- swiper -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- custom js -->
     <script src="script.js"></script>
   </body>
 </html>

@@ -80,8 +80,8 @@ li .nav-links:hover {
 
 .bar {
   display: block;
-  width: 25px;
-  height: 5px;
+  width: 35px;
+  height: 4px;
   background: #fff;
   margin: 5px auto;
   border-radius: 1px;
@@ -292,6 +292,9 @@ li .nav-links:hover {
 .Testimonial-Segement {
   background-color: #faf4f5;
   padding: 20px 25px;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 80vh;
 }
 
 .Testimonial-h2 {
@@ -308,22 +311,20 @@ li .nav-links:hover {
   background-color: #f8951c;
 }
 
-.Testimonials-list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  row-gap: 3rem;
-  column-gap: 9rem;
-}
-.testifier {
-  justify-items: center;
+
+.swiper-wrapper img {
+  display: flex;
+margin: 0 auto;
+width: 300px;
+aspect-ratio: 1;
+border-radius: 10px;
+aspect-ratio: 1;
+align-items: center;
+/* padding-top: 1rem; */
 }
 
-.testifier-img {
-  width: 200px;
-  aspect-ratio: 1;
-  border-radius: 100px;
-  padding: 10px;
+ .swiper-wrapper .swiper-slide  .testifier-img {
+  border: 2px solid #252525;
 }
 .testifier-name {
   text-align: center;
@@ -336,7 +337,9 @@ li .nav-links:hover {
   font-size: small;
   line-height: 14px;
   text-align: center;
+  margin: 20px 10px 20px;
 }
+
 
 /* Gallery Segement */
 .Gallery {
@@ -476,17 +479,17 @@ form {
   }
 
   /* make the 2nd bar invisible */
-  /* .menu-bar.active .bar:nth-child(2) {
+   .menu-bar.active .bar:nth-child(2) {
     opacity: 0;
-  } */
+  } 
   /* rotate 1st bar */
-  /* .menu-bar.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  } */
+.menu-bar.active .bar:nth-child(1) {
+    transform: translatey(10px) rotate(-45deg);
+  }
   /* rotate 3rd bar */
-  /* .menu-bar.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-35deg);
-  } */
+  .menu-bar.active .bar:nth-child(3) {
+    transform: translatey(-10px) rotate(45deg);
+  } 
 
   /*----HOME----*/
   .navs-content {
@@ -540,14 +543,6 @@ form {
     column-gap: 11rem;
   }
 
-  /* Testimonial Segement */
-
-  .Testimonials-list {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    row-gap: 3rem;
-    column-gap: 9rem;
-  }
 
   /* Gallery Segement */
   .Gallery-outline {
@@ -591,14 +586,7 @@ form {
     text-align: center;
   }
 
-  /* Testimonial Segement */
-
-  .Testimonials-list {
-    grid-template-columns: repeat(1, 1fr);
-    padding: 25px 140px;
-    justify-content: center;
-    align-items: center;
-  }
+ 
   /* Gallery Segement */
 
   .Gallery-outline {
